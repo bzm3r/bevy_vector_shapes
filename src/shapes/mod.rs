@@ -8,6 +8,9 @@ pub use disc::*;
 mod line;
 pub use line::*;
 
+mod quad_bezier;
+pub use quad_bezier::*;
+
 mod rectangle;
 pub use rectangle::*;
 

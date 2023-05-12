@@ -90,6 +90,7 @@ impl Plugin for Shape2dPlugin {
             .add_plugin(PainterPlugin)
             .add_plugin(ShapeRenderPlugin)
             .add_plugin(ShapeTypePlugin::<Line>::default())
+            .add_plugin(ShapeType3dPlugin::<QuadBezier>::default())
             .add_plugin(ShapeTypePlugin::<Disc>::default())
             .add_plugin(ShapeTypePlugin::<Rectangle>::default())
             .add_plugin(ShapeTypePlugin::<RegularPolygon>::default());
@@ -133,6 +134,7 @@ impl Plugin for ShapePlugin {
         }
         app.add_plugin(Shape3dRenderPlugin)
             .add_plugin(ShapeType3dPlugin::<Line>::default())
+            .add_plugin(ShapeType3dPlugin::<QuadBezier>::default())
             .add_plugin(ShapeType3dPlugin::<Disc>::default())
             .add_plugin(ShapeType3dPlugin::<Rectangle>::default())
             .add_plugin(ShapeType3dPlugin::<RegularPolygon>::default());

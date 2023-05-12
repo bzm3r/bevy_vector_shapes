@@ -50,6 +50,10 @@ pub const DISC_HANDLE: HandleUntyped =
 pub const LINE_HANDLE: HandleUntyped =
     HandleUntyped::weak_from_u64(Shader::TYPE_UUID, 13656934768948239208);
 
+/// Handler to shader for drawing lines.
+pub const QUAD_BEZIER_HANDLE: HandleUntyped =
+    HandleUntyped::weak_from_u64(Shader::TYPE_UUID, 18389493848393948493);
+
 /// Handler to shader for drawing regular polygons.
 pub const NGON_HANDLE: HandleUntyped =
     HandleUntyped::weak_from_u64(Shader::TYPE_UUID, 17394960287230910395);
@@ -82,6 +86,12 @@ pub fn load_shaders(app: &mut App) {
         app,
         LINE_HANDLE,
         "shaders/shapes/line.wgsl",
+        Shader::from_wgsl
+    );
+    load_internal_asset!(
+        app,
+        QUAD_BEZIER_HANDLE,
+        "shaders/shapes/quad_bezier.wgsl",
         Shader::from_wgsl
     );
     load_internal_asset!(
